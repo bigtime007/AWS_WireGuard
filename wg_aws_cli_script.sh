@@ -1,7 +1,7 @@
 #!/bin/bash
 aws ec2 describe-key-pairs
 read -p "type the name of the key pair you wish to use:" sshkey
-aws ec2 create-security-group --group-name WireGuardServerSG --description "WireGuard Port 22,80,443,51820" --vpc-id vpc-a330bcc8
+aws ec2 create-security-group --group-name WireGuardServerSG --description "WireGuard Ports 22,80,443,51820" --vpc-id vpc-a330bcc8
 aws ec2 authorize-security-group-ingress --group-name WireGuardServerSG --protocol tcp --port 22 --cidr 0.0.0.0/0
 aws ec2 authorize-security-group-ingress --group-name WireGuardServerSG --protocol udp --port 51820 --cidr 0.0.0.0/0
 aws ec2 authorize-security-group-ingress --group-name WireGuardServerSG --protocol tcp --port 80 --cidr 0.0.0.0/0
