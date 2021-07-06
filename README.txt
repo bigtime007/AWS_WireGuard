@@ -17,3 +17,6 @@ sudo bash wg_add_peer_device#.sh
 #Windows installer can be found here...
 https://www.wireguard.com/install/
 #Windows 10 Requires a DNS configuration, DNS = 1.1.1.1 added to the interface settings
+
+#Using peer: Linux
+#Comming in the future.
