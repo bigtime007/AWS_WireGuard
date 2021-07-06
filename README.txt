@@ -4,7 +4,6 @@
 #Note: "sudo su" is required for running wiregaurd (wg), accessing /etc/wireguard directories, and running scripts in this repository.
 #Open AWS CLI and run the following...
 git clone https://github.com/kcash333/AWS_WireGuard
-sudo su
 cd AWS_WireGuard
 bash aws_wireguard_cli_start.sh
 #Once this is done on the AWS CLI, SSH into EC2 instance and run:
