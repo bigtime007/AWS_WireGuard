@@ -1,5 +1,4 @@
 #!/bin/bash
-aws ec2 describe-subnets
 aws ec2 describe-key-pairs
 read -p "type the name of the key pair you wish to use:" sshkey
 aws ec2 create-security-group --group-name WireGuardServerSG --description "WireGuard Port 22,80,443,51820" --vpc-id vpc-a330bcc8
@@ -7,7 +6,7 @@ aws ec2 authorize-security-group-ingress --group-name WireGuardServerSG --protoc
 aws ec2 authorize-security-group-ingress --group-name WireGuardServerSG --protocol udp --port 51820 --cidr 0.0.0.0/0
 aws ec2 authorize-security-group-ingress --group-name WireGuardServerSG --protocol tcp --port 80 --cidr 0.0.0.0/0
 aws ec2 authorize-security-group-ingress --group-name WireGuardServerSG --protocol tcp --port 443 --cidr 0.0.0.0/0
-read -p "Copy the GroupID: "sg-xyz" and paste it here:" SG_NAME
+read -p "Copy the GroupID: "sg-example0numbers0ex" and paste it here:" SG_NAME
 aws ec2 describe-subnets
 read -p "Copy the SubnetId You wand to use from list and Paste it here:" SUBNET
 
