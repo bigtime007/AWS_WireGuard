@@ -1,5 +1,5 @@
 #!/bin/bash
-aws ec2 describe-subnet
+aws ec2 describe-subnets
 aws ec2 describe-key-pairs
 read -p "type the name of the key pair you wish to use:" sshkey
 aws ec2 create-security-group --group-name WireGuardServerSG --description "WireGuard Port 22,80,443,51820" --vpc-id vpc-a330bcc8
