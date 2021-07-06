@@ -23,8 +23,8 @@ cp -f ./wg0.conf.def ./wg0.conf
 systemctl enable wg-quick@wg0
 mkdir -p /home/ubuntu/wg-setup
 cd /home/ubuntu/wg-setup
-echo "run as:sudo peer-add-device#-wg.sh" > run_peer-add-device#-wg.sh_as_sudo.txt
-wget https://wireguard-dev.s3.us-east-2.amazonaws.com/ec2-user-data/peer-add-device%23-wg.sh.sh
+echo "run as:sudo wg_add_peer_device#.sh" > run_wg_add_peer_device#.sh_as_sudo.txt
+git clone https://github.com/kcash333/AWS_WireGuard
 cd /home/ubuntu/
 chown -hR ubuntu wg-setup/
 exit
