@@ -8,7 +8,7 @@ aws ec2 authorize-security-group-ingress --group-name WireGuardServerSG --protoc
 aws ec2 authorize-security-group-ingress --group-name WireGuardServerSG --protocol tcp --port 80 --cidr 0.0.0.0/0
 aws ec2 authorize-security-group-ingress --group-name WireGuardServerSG --protocol tcp --port 443 --cidr 0.0.0.0/0
 read -p "Copy the GroupID: "sg-xyz" and paste it here:" SG_NAME
-aws ec2 describe-subnet
+aws ec2 describe-subnets
 read -p "Copy the SubnetId You wand to use from list and Paste it here:" SUBNET
 
 aws ec2 run-instances --image-id ami-00399ec92321828f5 --count 1 --instance-type t2.micro \
