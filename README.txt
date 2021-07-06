@@ -2,7 +2,9 @@
 #Ubuntu 20
 #How to Use AWS EC2 to set up a VPN using WireGuard 
 #Note: "sudo su" is required for running wiregaurd (wg), accessing /etc/wireguard directories, and running scripts in this repository.
-#Open AWS CLI and run the following...
+#Open the AWS CLI
+https://us-east-2.console.aws.amazon.com/cloudshell/home?region=us-east-2
+#and run the following...
 git clone https://github.com/kcash333/AWS_WireGuard
 cd AWS_WireGuard
 bash aws_wireguard_cli_start.sh
