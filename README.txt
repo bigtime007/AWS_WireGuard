@@ -1,8 +1,13 @@
-# AWS_WireGuard
+#AWS_WireGuard
 #Ubuntu 20
-#How to Use AWS EC2 to setup a VPN using WireGuard 
-#Note: "sudo su" is required for running wiregaurd (wg), accessing /etc/wireguard directories, and running scripts contained in the this respository.
+#How to Use AWS EC2 to set up a VPN using WireGuard 
+#Note: "sudo su" is required for running wiregaurd (wg), accessing /etc/wireguard directories, and running scripts in this repository.
+#Open AWS CLI and run the following...
 git clone https://github.com/kcash333/AWS_WireGuard
 sudo su
 cd AWS_WireGuard
 bash aws_wireguard_cli_start.sh
+#Once this is done on the AWS CLI, SSH into EC2 instance and run:
+cd ~/wg-setup/AWS_WireGuard
+sudo bash wg_add_peer_device#.sh
+#Make sure you plan out the device number, IP in 10.0.0.x format, and have any Public Keys from the device you wish to connect before running this script because it will take down the wg0 Interface.
