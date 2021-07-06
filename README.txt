@@ -12,6 +12,8 @@ bash aws_wireguard_cli_start.sh
 cd ~/wg-setup/AWS_WireGuard
 sudo bash wg_add_peer_device#.sh
 #Make sure you plan out the device number, IP in 10.0.0.x format, and have any Public Keys from the device you wish to connect before running this script because it will take down the wg0 Interface.
-#Windows 10 Requires a DNS configuration, DNS = 1.1.1.1 added to the interface settings
+
+#Using peer: Win10
 #Windows installer can be found here...
 https://www.wireguard.com/install/
+#Windows 10 Requires a DNS configuration, DNS = 1.1.1.1 added to the interface settings
