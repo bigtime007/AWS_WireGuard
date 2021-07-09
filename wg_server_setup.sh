@@ -27,4 +27,5 @@ echo "run as:sudo wg_add_peer_device#.sh" > run_wg_add_peer_device#.sh_as_sudo.t
 git clone https://github.com/kcash333/AWS_WireGuard
 cd /home/ubuntu/
 chown -hR ubuntu wg-setup/
+git clone https://github.com/kcash333/AWS_install_NFS_Ubuntu20
 exit
