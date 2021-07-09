@@ -28,4 +28,5 @@ git clone https://github.com/kcash333/AWS_WireGuard
 cd /home/ubuntu/
 chown -hR ubuntu wg-setup/
 git clone https://github.com/kcash333/AWS_install_NFS_Ubuntu20
+chmod 0777 AWS_install_NFS_Ubuntu20
 exit
